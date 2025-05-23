@@ -1,0 +1,62 @@
+defaults:
+  - base_config
+  - path: base_path
+  - _self_
+
+hydra:
+  run:
+    dir: ${path.logging_path}/training/Llama3_MixAT_GCG/${experiment_id}
+
+experiment: adversarial_training
+
+dataset:
+  data_path: ./data/
+  utility_data: ultrachat_200k
+  probabilities:
+  - 0.125 # adv
+  - 0.875 # utility
+  seed_for_interleave_dataset: 42
+
+adversarial:
+  iters: 10
+  opt_config:
+    type: sign
+    lr: 1.0e-04
+  eps: 0.075
+  debug: 0
+  init_type: instruction
+  attack_type: mixed_perturbed_llama3_with_GCG
+
+sfttrainer:
+  packing: false
+  max_seq_length: 256
+
+training:
+  num_train_epochs: 2
+  per_device_train_batch_size: 8
+  gradient_accumulation_steps: 8
+  fp16: True
+  bf16: False
+  schedule: uniform45_10_epoch2
+
+trainer_hparams:
+  utility_weight: 1.0
+  away_weight: 0.5
+  toward_weight: 0.5
+  away_cutoff: -5.0
+  toward_cutoff: 0.5
+  away_loss_type: negative_cross_entropy
+  trainer_type: ul
+  dtype: auto
+
+peft:
+  lora_alpha: 16
+  lora_dropout: 0.1
+  r: 64
+  bias: none
+  task_type: CAUSAL_LM
+  target_modules: all-linear
+
+random_seed_for_random_library: 42
+  
+# bnb: null

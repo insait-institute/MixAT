@@ -1,0 +1,14 @@
+default_method_hyperparameters:
+  seed: 1
+
+all_jailbreaks:
+  random_subset: -1  # use all jailbreaks
+
+#random_subset_5:
+#  random_subset: 5
+
+zephyr_7b_cat:
+  random_subset: -1
+
+#zephyr_7b:
+#  random_subset: 1

@@ -1,0 +1,37 @@
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.10.14
+  - numpy
+  - pytorch
+  - pytorch-cuda=12.1
+  - pip:
+    - peft
+    - shapely<2.1.0
+    - transformers<4.46.0
+    - spacy==3.7.2
+    - confection==0.1.4
+    - vllm>=0.3.0,<0.5.2
+    - transformers
+    - bitsandbytes
+    - fschat
+    - ray
+    - openai==0.28
+    - anthropic
+    - mistralai<=0.4.2 
+    - google-generativeai
+    - google-cloud-aiplatform
+    - torchvision
+    - sentence_transformers
+    - datasketch
+    - matplotlib
+    - accelerate
+    - pandas
+    - boto3
+    - bpe
+    - neptune
+    - together
+postinstall: |
+  python -m spacy download en_core_web_sm

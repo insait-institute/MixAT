@@ -1,0 +1,15 @@
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.10.14
+  - numpy
+  - pytorch
+  - pytorch-cuda=12.1
+  - pip:
+    - peft
+    - transformers<=4.45
+    - vllm>=0.3.0,<=0.5.1
+    - neptune
+    - bitsandbytes

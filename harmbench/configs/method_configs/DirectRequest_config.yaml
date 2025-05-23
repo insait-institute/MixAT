@@ -1,0 +1,39 @@
+default_method_hyperparameters:
+  placeholder: placeholder
+
+default:
+  placeholder: placeholder
+
+zephyr_7b_base:
+  target_model:
+    model_name_or_path: <model_name1>['model']['model_name_or_path']
+    use_fast_tokenizer: False
+    use_vllm: False 
+    load_in_4bit: True
+    dtype: bfloat16
+  
+zephyr_7b_mixat:
+  target_model:
+    model_name_or_path: <model_name1>['model']['model_name_or_path']
+    use_fast_tokenizer: False
+    use_vllm: False 
+    load_in_4bit: True
+    dtype: bfloat16
+    peft_path: <model_name1>['model']['peft_path']
+
+llama3_base:
+  target_model:
+    model_name_or_path: <model_name1>['model']['model_name_or_path']
+    use_fast_tokenizer: False
+    use_vllm: False 
+    load_in_4bit: True
+    dtype: bfloat16
+
+llama3_mixat:
+  target_model:
+    model_name_or_path: <model_name1>['model']['model_name_or_path']
+    use_fast_tokenizer: False
+    use_vllm: False 
+    load_in_4bit: True
+    dtype: bfloat16
+    peft_path: <model_name1>['model']['peft_path']

@@ -1,0 +1,16 @@
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.10.14
+  - numpy
+  - pytorch
+  - pytorch-cuda=12.1
+  - pip:
+    - peft
+    - transformers
+    - pandas
+    - neptune
+postinstall: |
+  pip install -e "fastchat/[model_worker,llm_judge]"

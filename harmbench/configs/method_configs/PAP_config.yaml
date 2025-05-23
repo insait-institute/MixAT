@@ -1,0 +1,74 @@
+default_method_hyperparameters:
+  # ===== Generation configs ======
+  # attack_gen_config   stop_tokens: ['|']
+  #was max_new_tokens instead of max_n_tokens
+  attack_gen_config:
+    temperature: 1.0
+    max_n_tokens: 2048 
+    top_p: 0.7
+  attack_model:
+    model_name_or_path: mistralai/Mixtral-8x7B-Instruct-v0.1
+    token: <your_together_token>
+    use_vllm: True
+    dtype: bfloat16
+  top_k_persuasion_taxonomy: 10
+
+top_5:
+  attack_model:
+    model_name_or_path: mistralai/Mixtral-8x7B-Instruct-v0.1
+    token: <your_together_token>
+    use_vllm: True
+    num_gpus: 1
+    dtype: bfloat16
+  top_k_persuasion_taxonomy: 5
+
+
+full_40:
+  attack_model:
+    model_name_or_path: mistralai/Mixtral-8x7B-Instruct-v0.1
+    token: <your_together_token>
+    use_vllm: True
+    num_gpus: 1
+    dtype: bfloat16
+  top_k_persuasion_taxonomy: 40
+
+#Models of MixAT paper
+zephyr_7b_base:
+  target_model:
+    model_name_or_path: <model_name1>['model']['model_name_or_path']
+    use_fast_tokenizer: False
+    use_vllm: False
+    load_in_4bit: True
+    dtype: bfloat16
+
+zephyr_7b_mixat:
+  target_model:
+    model_name_or_path: <model_name1>['model']['model_name_or_path']
+    use_fast_tokenizer: False
+    use_vllm: False
+    load_in_4bit: True
+    dtype: bfloat16
+    peft_path: <model_name1>['model']['peft_path']
+
+llama3_base:
+  target_model:
+    model_name_or_path: <model_name1>['model']['model_name_or_path']
+    use_fast_tokenizer: False
+    use_vllm: False
+    load_in_4bit: True
+    dtype: bfloat16
+    chat_template: <model_name1>['model']['chat_template']
+    fschat_template: <model_name1>['model']['fschat_template']
+
+llama3_mixat_long_llama3_again_good:
+  target_model:
+    model_name_or_path: <model_name1>['model']['model_name_or_path']
+    use_fast_tokenizer: False
+    use_vllm: False
+    load_in_4bit: True
+    dtype: bfloat16
+    chat_template: <model_name1>['model']['chat_template']
+    fschat_template: <model_name1>['model']['fschat_template']
+    peft_path: <model_name1>['model']['peft_path']
+
+#Models of MixAT paper end

@@ -1,0 +1,11 @@
+torch
+peft
+transformers<=4.45
+bitsandbytes
+neptune
+pandas
+vllm>=0.3.0,<=0.5.1
+protobuf
+accelerate<1.5.0
+sentencepiece
+numpy

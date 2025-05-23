@@ -1,0 +1,14 @@
+default_method_hyperparameters:
+  # ===== Generation configs ======
+  # attack_gen_config   stop_tokens: ['|']
+  #was max_new_tokens instead of max_n_tokens
+  attack_gen_config:
+    temperature: 1.0
+    max_n_tokens: 200 
+    top_p: 0.7
+  attack_model:
+    model_name_or_path: mistralai/Mixtral-8x7B-Instruct-v0.1
+    token: #<your_token>
+    use_vllm: True
+    dtype: bfloat16
+  top_k_persuasion_taxonomy: -1 

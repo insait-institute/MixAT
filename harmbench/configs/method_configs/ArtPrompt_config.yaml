@@ -1,0 +1,9 @@
+default_method_hyperparameters:
+  targets_path: data/optimizer_targets/harmbench_targets_text.json
+  masking_model: gpt-4-turbo #gpt4-4, not this was the original one
+  masking_model_key: <openai_api_key>
+  masking_direction: horizontal # "vertical"
+  fontname: cards # ['gen', 'alphabet','letters','keyboard','cards','puzzle','gen']
+
+<model_name1>:
+  target_model: <model_name1>['model']
