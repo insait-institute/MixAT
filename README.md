@@ -3,29 +3,7 @@
 This repository contains the code for the paper **MixAT: Combining Continuous and Discrete Adversarial Training Methods**.
 
 ## Trained Adapters
-Trained adapters with MixAT and MixAT+GCG methods can be found in Hugging Face:
-
-[MixAT-paper/Zephyr-7B-MixAT](https://huggingface.co/MixAT-paper/Zephyr-7B-MixAT)
-
-[MixAT-paper/Zephyr-7B-MixAT-GCG](https://huggingface.co/MixAT-paper/Zephyr-7B-MixAT-GCG)
-
-
-[MixAT-paper/Llama-3-8B-MixAT](https://huggingface.co/MixAT-paper/Llama-3-8B-MixAT)
-
-[MixAT-paper/Llama-3-8B-MixAT-GCG](https://huggingface.co/MixAT-paper/Llama-3-8B-MixAT-GCG)
-
-
-[MixAT-paper/Qwen-14B-MixAT](https://huggingface.co/MixAT-paper/Qwen-14B-MixAT)
-
-[MixAT-paper/Qwen-14B-MixAT-GCG](https://huggingface.co/MixAT-paper/Qwen-14B-MixAT-GCG)
-
-
-[MixAT-paper/Mistral-7B-MixAT](https://huggingface.co/MixAT-paper/Mistral-7B-MixAT)
-
-[MixAT-paper/Llama-3.1-8B-MixAT](https://huggingface.co/MixAT-paper/Llama-3.1-8B-MixAT)
-
-[MixAT-paper/Qwen-32B-MixAT](https://huggingface.co/MixAT-paper/Qwen-32B-MixAT)
-
+Trained adapters with the MixAT and MixAT+GCG methods can be found on [Hugging Face](https://huggingface.co/collections/INSAIT-Institute/mixat-68345b175d381301e7520e2a)
 ## Requirements
 
 We used Python 3.10.14 in our experiments. To install the necessary dependencies, run:
