@@ -3,7 +3,7 @@
 This repository contains the code for the paper **MixAT: Combining Continuous and Discrete Adversarial Training Methods**.
 
 ## Trained Adapters
-Trained adapters with the MixAT and MixAT+GCG methods can be found on [Hugging Face](https://huggingface.co/collections/INSAIT-Institute/mixat-68345b175d381301e7520e2a)
+Trained adapters with the MixAT and MixAT+GCG methods can be found on [Hugging Face](https://huggingface.co/collections/INSAIT-Institute/mixat-68345b175d381301e7520e2a).
 ## Requirements
 
 We used Python 3.10.14 in our experiments. To install the necessary dependencies, run:
