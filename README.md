@@ -175,19 +175,13 @@ cd fastchat/fastchat/llm_judge
 Model path and peft path should be a Hugging Face or compatible local path. Model name is custom name for the experiment. Additionally, Hugging Face token, Hugging Face cache path and OpenAI API token have to be specified in `utility_eval/mt_bench/run_utility_evaluate.sh` and in `utility_eval/mt_bench/run_utility_evaluate_peft.sh`.
 
 
-## References
-
-Our code is based on a custom version of the following open-source repositories:
-
-[1] [Continuous-AdvTrain](https://github.com/sophie-xhonneux/Continuous-AdvTrain)
-
-[2] [HarmBench](https://github.com/centerforaisafety/HarmBench)
-
-[3] [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness)
-
-[4] [FastChat](https://github.com/lm-sys/FastChat)
-
-[5] [XSTest](https://github.com/paul-rottger/xstest)
-
-For further details, please refer to the original papers and repositories.
-
+## Citation
+If you find this repo useful for your research, please consider citing our paper
+```
+@article{dekany2025mixat,
+  title={MixAT: Combining Continuous and Discrete Adversarial Training for LLMs},
+  author={D{\'e}k{\'a}ny, Csaba and Balauca, Stefan and Staab, Robin and Dimitrov, Dimitar I and Vechev, Martin},
+  journal={arXiv preprint arXiv:2505.16947},
+  year={2025}
+}
+```
