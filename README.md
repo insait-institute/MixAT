@@ -79,6 +79,7 @@ We used the following attacks for evaluation:
 | TAP  |
 | GCG  |
 | HumanJailbreaks  |
+| AutoDAN |
 
 
 ## XSTest Utility Evaluation
